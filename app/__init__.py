@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = 'example-secret' #Used for demonstration, DO NOT use 
 db = SQLAlchemy(app)
 
 from app import routes
-from app.models import Student, Grade
+from app.models import Student, Grade, House
 
 @app.cli.command('init-db')
 def create_db():
@@ -29,30 +29,42 @@ def create_db():
     year6 = Grade(name='Year 6')
     db.session.add(year6)
 
-    # TODO: Add code that creates new House records, once that model has been defined
+    blue = House(name='Blue')
+    db.session.add(blue)
+
+    yellow = House(name='Yellow')
+    db.session.add(yellow)
+
+    red = House(name='Red')
+    db.session.add(red)
+
+    green = House(name='Green')
+    db.session.add(green)
+
+
 
     # Creates two example students, we do not need to add these to the sessions explicitly
     # Flask-SQLAlchemy works out that they need to be added, as they are linked to the grade records above.
     jack = Student (
         name = 'Jack',
         grade = year6,
-        # TODO: Add the house_id field once it has been defined in the Student model
+        house = blue,
         english_mark = 90,
         science_mark = 90,
-        # TODO: Add a value for the mathematics_mark field once it has been defined in the Student model
+        mathematics_mark = 90,
         does_homework = True,
-        # TODO: Add a value for the stays_on_task field once it has been defined in the Student model
+        stays_on_task = True
     )
 
     dom = Student (
         name = 'Dom',
         grade = year5,
-        # TODO: Add the house_id field once it has been defined in the model
+        house = yellow,
         english_mark = 90,
         science_mark = 100,
-        # TODO: Add a value for the mathematics_mark field once it has been defined in the Student model
+        mathematics_mark = 90,
         does_homework = True,
-        # TODO: Add a value for the stays_on_task field once it has been defined in the Student model
+        stays_on_task = True
     )
 
     db.session.commit()
