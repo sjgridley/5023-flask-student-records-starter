@@ -5,7 +5,7 @@ from wtforms.validators import InputRequired
 class AddStudentForm(FlaskForm):
     name = StringField('Student name', validators=[InputRequired()])
     grade_id = SelectField('Grade', coerce=int)
-    house_id = SelectField('House')
+    house_id = SelectField('House', coerce=int)
     english_mark = IntegerField('English', validators=[InputRequired()])
     science_mark = IntegerField('Science', validators=[InputRequired()])
     mathematics_mark = IntegerField('Mathematics', validators=[InputRequired()])

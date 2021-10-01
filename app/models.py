@@ -14,7 +14,7 @@ class Student(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.Text)
     grade_id = db.Column(db.Integer, db.ForeignKey('grade.id'), nullable=False)
-    house_id = db.Column(db.Text, db.ForeignKey('house.id'))
+    house_id = db.Column(db.Integer, db.ForeignKey('house.id'), nullable=False)
     english_mark = db.Column(db.Integer)
     science_mark = db.Column(db.Integer)
     mathematics_mark = db.Column(db.Integer)

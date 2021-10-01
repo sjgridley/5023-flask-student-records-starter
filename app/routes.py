@@ -24,7 +24,7 @@ def get_house_choices():
     '''
     house_choices = []
     for house in House.query.all():
-        choice = (house.id, house.name)
+        choice = (house.id, house.colour)
         house_choices.append(choice)
     return house_choices
 
