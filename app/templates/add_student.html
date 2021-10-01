@@ -17,7 +17,8 @@
     {{ form.grade_id.label }}
     {{ form.grade_id }}
 
-    <!-- TODO: Add label and input for house_id field, once this had been added to the form. -->
+    {{ form.house_id.label }}
+    {{ form.house_id }}
 
     <h3>Subjects</h3>
 
@@ -27,7 +28,8 @@
     {{ form.science_mark.label }}
     {{ form.science_mark }}
 
-    <!-- TODO: Add label and input for mathematics_mark field, once this has been added to the form. -->
+    {{ form.mathematics_mark.label }}
+    {{ form.mathematics_mark }}
 
     <h3>Behaviours</h3>
 
@@ -37,7 +39,10 @@
         {{ form.does_homework }}
     </label>
 
-    <!-- TODO: Add label and input for stays_on_task field, once this has been added to the form. -->
+    <label>
+        {{ form.stays_on_task.label.text | safe }}
+        {{ form.stays_on_task }}
+    </label>
     
     <br/>
     {{ form.submit(class_="pure-button pure-button-primary") }}

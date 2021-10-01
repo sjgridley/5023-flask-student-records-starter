@@ -48,7 +48,7 @@ def create_db():
     jack = Student (
         name = 'Jack',
         grade = year6,
-        house = blue,
+        house_id = 1,
         english_mark = 90,
         science_mark = 90,
         mathematics_mark = 90,
@@ -59,7 +59,7 @@ def create_db():
     dom = Student (
         name = 'Dom',
         grade = year5,
-        house = yellow,
+        house_id = 3,
         english_mark = 90,
         science_mark = 100,
         mathematics_mark = 90,
