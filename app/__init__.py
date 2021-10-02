@@ -29,16 +29,16 @@ def create_db():
     year6 = Grade(name='Year 6')
     db.session.add(year6)
 
-    blue = House(name='Blue')
+    blue = House(colour='Blue')
     db.session.add(blue)
 
-    yellow = House(name='Yellow')
+    yellow = House(colour='Yellow')
     db.session.add(yellow)
 
-    red = House(name='Red')
+    red = House(colour='Red')
     db.session.add(red)
 
-    green = House(name='Green')
+    green = House(colour='Green')
     db.session.add(green)
 
 
